@@ -15,9 +15,9 @@
       text-align: center;
     }
     code {
-      color: blue;
       font-size: 1rem;
       font-family: monospace;
+      color: darkblue;
     }
     </style>
   </head>
@@ -25,6 +25,10 @@
     <h1>Am I Online?</h1>
     <p>This is a very simple service for checking if your application has access
     to the internet.</p>
-    <p>You use this by sending a GET request to <code>https://amionline.80x24.ca/UUID</code>, where UUID is whatever string you want, and then checking that the response is that exact same string.</p>
+    <ol>
+      <li>Generate a random string <code>RANDOM_STRING</code></li>
+      <li>Send GET request to <code>https://amionline.80x24.ca/RANDOM_STRING</code></li>
+      <li>Check the response body is <em>exactly</em> <code>RANDOM_STRING</code></li>
+    </ol>
   </body>
 </html>
